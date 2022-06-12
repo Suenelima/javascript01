@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Javascript</title>
+</head>
+
+<h1> Contéudo de  Javascript, primeira atividade!</h1>
+<img src="OIP.jpg" alt="100%">
+
+Digite um Número:<input id="num" type="number"> <br />
+<button onclick="paridade()">Resposta</button><br />
+
+Resposta: <div id='resposta' style='display:inline'></div>
+
+<script type="text/javascript">
+    /*Lendo a variável*/
+function paridade(){
+var num = parseInt(document.getElementById("num").value);
+   var resposta = document.getElementById('resposta');
+
+    /*verificando o resto da divisão por 2, se = 0 par senao impar*/
+      if (num%2 == 0){
+        resposta.innerHTML = " o número é positivo e Par ";
+      }
+      
+      else{
+        resposta.innerHTML = " o número é positivo e Ímpar";
+      } 
+       if ( num == 0){
+        resposta.  innerHTML = " neutro";
+       }
+     
+    
+}
+
+       
+</script>
+<body>
+    <h2> Segunda parte do código. Estética</h2>
+    <label for="procedimentos">selecione o tipo de procedimento:</label>
+    <select id="procedimentos">
+        <option value="">--Escolha um--</option>
+        <option value="jato de plasma"> Jato de Plasma</option>
+        <option value="micropigmentação">Micropigmentação</option>
+        <option value="peeling facial"> Peeling Facial</option>
+        <option value="preenchimento labial">Preenchimento Labial</option>
+
+    </select>
+    <p></p>
+</body>
+ <script>
+    const select= document. querySelector("select");
+    const para = document.querySelector("p");
+    select.onchange = setprocedimentos;
+
+
+
+    function setprocedimentos (){
+        const escolha = select.value
+        switch(escolha) {
+            case 'jato de plasma':
+            para.textContent= ' O jato de plasma é um tratamento estético que pode ser usado contra rugas, linhas de expressão, manchas escuras na pele, cicatrizes e estrias, já que favorece a produção de colágeno e fibras elásticas, reduz o queloide e ainda facilita a entrada de ativos na pele ';
+            break;
+            case 'micropigmentação':
+            para.textContent= 'A micropigmentação é um procedimento semi permanente que introduz um pigmento de cor específica para cada pessoa, mais comum na região das sobrancelha';
+            break;
+            case 'peeling facial':
+            para.textContent= 'O peeling facial é um tratamento estético feito por dermatologistas por meio de ácidos e outros cremes manipulados.';
+            break;
+            case 'preenchimento labial':
+            para.textContent= 'O preenchimento labial é um procedimento estético que tem como finalidade delinear o contorno dos lábios, aumentar o volume ou projetá-los para fora. É considerado um procedimento minimamente invasivo e não uma cirurgia, já que não necessita de centro cirúrgico para a realização.';
+            break;
+            default:
+                para.textContent=''
+        
+        
+        
+        }
+    }
+ </script>
+ <h3>O que é estética facial?</h3>
+ <p>A estética facial trata e cuida da pele do rosto, de forma que existem inúmeros incômodos estéticos na face que podem ser tratados com aparelhos avançados e tecnológicos.
+
+    A estética facial é o conjunto de tratamentos para face, ou seja, reúne procedimentos para deixar o rosto mais bonito e harmonioso.
+    
+    Para cada região do rosto existe um tratamento moderno e eficiente para manter uma boa aparência.</p>
+    <h3>Argila</h3>
+    <p>A argila é um tratamento estético muito comum para reduzir a oleosidade da pele, hidratá-la e deixá-la tonificada. Existem vários tipos de argila e cada um possui um benefício diferente, por exemplo:</p>
+    <p>A argila preta é considerada a mais rica, pois vem da lama vulcânica</p>
+    <p>A branca reduz a oleosidade</p>
+    <p>As argilas vermelha e amarela hidratam e são antienvelhecimento</p>
+    <p>A verde possui propriedades anti-inflamatórias então auxilia no tratamento da acne</p>
+    <section>
+        <img src="argila.jpg.webp" alt="100%">
+    </section>
+    <footer>Palmas-to 2022/06/12 </footer><br>
+
+</html>
